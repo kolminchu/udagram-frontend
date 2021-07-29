@@ -8,8 +8,8 @@ import { map } from 'rxjs/operators';
 // const USER_API_HOST = environment.usersApiHost;
 
 
-const FEED_API_HOST = process.env.FEED_API_HOST;
-const USER_API_HOST = process.env.USER_API_HOST;
+// const FEED_API_HOST = process.env.FEED_API_HOST;
+// const USER_API_HOST = process.env.USER_API_HOST;
 
 @Injectable({
   providedIn: 'root'
