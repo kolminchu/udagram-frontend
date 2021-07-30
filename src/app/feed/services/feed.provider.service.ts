@@ -5,8 +5,8 @@ import { BehaviorSubject } from 'rxjs';
 import { ApiService } from '../../api/api.service';
 import { environment } from 'src/environments/environment';
 
-// const FEED_API_HOST = environment.feedApiHost;
-const FEED_API_HOST = process.env.FEED_API_HOST;
+const FEED_API_HOST = environment.feedApiHost;
+// const FEED_API_HOST = process.env.FEED_API_HOST;
 
 @Injectable({
   providedIn: 'root'
