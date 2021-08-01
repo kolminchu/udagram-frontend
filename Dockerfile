@@ -15,6 +15,10 @@ FROM nginx:latest
 
 COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
 
+RUN  rm -rf /etc/nginx/nginx.conf
+
+COPY ./nginx.conf  /etc/nginx/nginx.conf
+
 # EXPOSE 8100
 
 # CMD ["ionic", "serve"]
