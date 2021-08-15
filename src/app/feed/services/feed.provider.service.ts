@@ -24,7 +24,7 @@ export class FeedProviderService {
   }
 
   async uploadFeedItem(caption: string, file: File): Promise<any> {
-    const feedUrl = `${FEED_API_HOST}`+'/feed';
+    const feedUrl = `${FEED_API_HOST}`+'/feed/';
     console.log("feedUrl =", feedUrl)
     const res = await this.api.upload(feedUrl, file, {caption: caption, url: file.name});
     const feed = [res, ...this.currentFeed$.value];
