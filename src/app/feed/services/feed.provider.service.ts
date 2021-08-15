@@ -17,7 +17,7 @@ export class FeedProviderService {
   constructor(private api: ApiService) { }
 
   async getFeed(): Promise<BehaviorSubject<FeedItem[]>> {
-    const req = await this.api.get(`${FEED_API_HOST}`,'/feed');
+    const req = await this.api.get(`${FEED_API_HOST}`,'/feed/');
     const items = <FeedItem[]> req.rows;
     this.currentFeed$.next(items);
     return Promise.resolve(this.currentFeed$);
