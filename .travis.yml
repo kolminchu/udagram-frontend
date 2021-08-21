@@ -17,7 +17,7 @@ script:
   - npm run build
   - docker --version # print the version for logging
   - docker build -t udagram-frontend .
-  - docker tag udagram-frontend scharati/udagram-frontend:v2
+  - docker tag udagram-frontend scharati/udagram-frontend:v3
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
